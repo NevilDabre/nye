@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+
+.wish-text-holder {
+    font-family: "Luckiest Guy", cursive;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* JUMP */
+.wish-text .wish-letter {
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    animation: bounce 0.3s ease infinite alternate;
+    -webkit-animation: bounce 0.3s ease infinite alternate;
+    font-size: 80px;
+    color: #f0f;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+        0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+        0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.wish-text .wish-letter:nth-child(2) {
+    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
+}
+
+.wish-text .wish-letter:nth-child(3) {
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+}
+
+.wish-text .wish-letter:nth-child(4) {
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+}
+
+.wish-text .wish-letter:nth-child(5) {
+    animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+}
+
+.wish-text .wish-letter:nth-child(6) {
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+}
+
+.wish-text .wish-letter:nth-child(7) {
+    animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+}
+
+.wish-text .wish-letter:nth-child(8) {
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+}
+
+.wish-text .wish-letter:nth-child(9) {
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+}
+
+.wish-text .wish-letter:nth-child(10) {
+    animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+}
+
+.wish-text .wish-letter:nth-child(11) {
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+}
+
+.wish-text .wish-letter:nth-child(12) {
+    animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+}
+
+.wish-text .wish-letter:nth-child(13) {
+    animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s;
+}
+
+.wish-text .wish-letter:nth-child(14) {
+    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+}
+
+/* ANIMATION */
+@-webkit-keyframes bounce {
+    100% {
+        top: -20px;
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+            0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+            0 50px 25px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@keyframes bounce {
+    100% {
+        top: -20px;
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+            0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+            0 50px 25px rgba(0, 0, 0, 0.2);
+    }
+}

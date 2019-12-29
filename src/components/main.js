@@ -1,22 +1,24 @@
 import React, {useState, useEffect } from 'react';
 import './main.scss';
 import dotenv from 'dotenv';
+import { useHistory } from "react-router-dom";
+import NeonText from './neon-text/neontext';
 dotenv.config();
 
-const Main = () => {
+
+const Main = (props) => {
 	const searchBoxRef = React.useRef();
 	const whatsappBoxRef = React.useRef();
 	const formRef = React.useRef();
+	let history = useHistory();
 
 	useEffect(() => {
-		let clientName = window.location.href.split("client-name=")[1];
-		clientName = clientName.replace('%20', ' ');
+		let clientName = window.location.href.split("clientname=")[1];
 		if(clientName){
+			clientName = clientName.replace('%20', ' ');
 			setGreetings(`${clientName} Wishes You,`);
-		}else{
-			console.log('Noting')
 		}
-	  });
+	  }, []);
 
 	const [name, setName] = useState("");
 	const [greetings, setGreetings] = useState("We Wish You,");
@@ -26,6 +28,11 @@ const Main = () => {
 		searchBoxRef.current.classList.add("hide");
 		whatsappBoxRef.current.classList.remove("hide");
 		setGreetings(`${name} Wishes You,`);
+		//history.push({ pathname: '/publish', state: { clientname: name }, });
+		history.push({
+			pathname: '/publish',
+			search: `?clientname=${name}`
+		  })
 		};
 
 	}
@@ -102,7 +109,7 @@ const Main = () => {
 					</div>
 					<div className="menu__header">Settings</div>
 					<div className="menu__subheader">For more info, click any label.</div>
-					<form class="control-form">
+					<form className="control-form">
 						<div className="form-option form-option--select">
 							<label className="shell-type-label">Shell Type</label>
 							<select className="shell-type"></select>
@@ -165,7 +172,7 @@ const Main = () => {
 	</div>
 
 	<div className="stars"></div>
-	<img src="https://webstockreview.net/images/city-clipart-metropolitan-area-12.png" className="city-image" />
+	<img alt="city" src="https://webstockreview.net/images/city-clipart-metropolitan-area-12.png" className="city-image" />
 	<div className="bottom-panel">
 	
 		<div className="searchbar" ref={searchBoxRef}>

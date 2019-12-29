@@ -387,7 +387,6 @@ $letter-spacing: 0.06em;
 }
 
  .wish-text {
-    color: #FF0000;
     font-size: calc(1.5em + 5vw);
     font-family: "Caveat", sans-serif;
     text-align: center;
@@ -477,7 +476,8 @@ $letter-spacing: 0.06em;
 	border: 1px solid #f77;
 	position: absolute;
 	bottom: 10px;
-	z-index:2;
+	z-index: 3;
+
 }
 
 .inputbox {
@@ -511,8 +511,10 @@ $letter-spacing: 0.06em;
 }
 
 .whatsappbar{
-	z-index: 2;
+	z-index: 3;
 }
+
+
 
 .whatsapp-btn {
 	text-decoration: none;
