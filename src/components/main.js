@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import NeonText from './neon-text/neontext';
 import JumpingText from './jumpingText/jumpingText'
 import WaveText from './waveText/WaveText';
+import ReactTooltip from 'react-tooltip'
 dotenv.config();
 
 
@@ -188,7 +189,7 @@ const Main = (props) => {
 		
 
 		<div className="whatsappbar hide" ref={whatsappBoxRef}>
-			<a href={`whatsapp://send?text=There is a special 🎁 message from *${name}* just for your. See here:- ${process.env.REACT_APP_DOMAIN}/publish?clientname=${name}(No Spam, No Ads)`} className="whatsapp-btn">
+			<a href={`whatsapp://send?text=A special 🎁 message from *${name}*, See here(No Spam)➡️ ${process.env.REACT_APP_DOMAIN}/publish?clientname=${name}`} className="whatsapp-btn">
 				<h2><i className="fab fa-whatsapp"></i> &nbsp; Share on Whatsapp!</h2>
       		</a>
 		</div>
