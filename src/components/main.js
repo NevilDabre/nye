@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import NeonText from './neon-text/neontext';
 import JumpingText from './jumpingText/jumpingText'
 import WaveText from './waveText/WaveText';
-import ReactTooltip from 'react-tooltip'
+
 dotenv.config();
 
 
