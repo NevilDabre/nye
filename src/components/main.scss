@@ -379,7 +379,6 @@ $letter-spacing: 0.06em;
     height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
 	overflow: hidden;
 	position:absolute;
@@ -461,6 +460,11 @@ $letter-spacing: 0.06em;
 	z-index: 0;
 }
 
+.audio_player{
+	bottom: 10px;
+	padding: 0 1%;
+}
+
 .bottom-panel {
 	display: flex;
 	align-items: flex-end;
@@ -518,7 +522,7 @@ $letter-spacing: 0.06em;
 
 .whatsapp-btn {
 	text-decoration: none;
-	color: #fff;
+	color: white;
 	display: inline-block;
 	background-color: #25d366;
 	font-weight: bold;
@@ -528,12 +532,15 @@ $letter-spacing: 0.06em;
 
 .whatsapp-btn:hover {
 	background-color: darken(#25d366, 5%);
+	color: white;
 }
 
 .whatsapp-btn:focus {
 	background-color: darken(#25d366, 15%);
+	color: white;
 }
 
 .whatsapp-btn::after {
 	text-decoration: none;
+	color: white;
 }
