@@ -2,10 +2,7 @@ import React, {useState, useEffect } from 'react';
 import './main.scss';
 import dotenv from 'dotenv';
 import { useHistory } from "react-router-dom";
-import NeonText from './neon-text/neontext';
-import JumpingText from './jumpingText/jumpingText'
 import WaveText from './waveText/WaveText';
-
 dotenv.config();
 
 
@@ -190,7 +187,7 @@ const Main = (props) => {
 
 		<div className="whatsappbar hide" ref={whatsappBoxRef}>
 			<a href={`whatsapp://send?text=A special 🎁 message from *${name}*, See here(No Spam)➡️ ${process.env.REACT_APP_DOMAIN}/publish?clientname=${name}`} className="whatsapp-btn">
-				<h2><i className="fab fa-whatsapp"></i> &nbsp; Share on Whatsapp!</h2>
+				<h2><i className="fab fa-whatsapp"></i> Share on Whatsapp <i className="fab fa-whatsapp"></i></h2>
       		</a>
 		</div>
 	</div>

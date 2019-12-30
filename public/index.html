@@ -2421,8 +2421,9 @@
       })
 
       var audio = new Audio('./wwc.mp3');
+      audio.loop = true;
 
-      $(window).on("mouseenter touchstart", function () {
+      $(window).on("click mouseleave mouseenter touchstart mouseout", function () {
         var playPromise = audio.play();
 
         if (playPromise !== undefined) {
