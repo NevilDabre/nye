@@ -6,7 +6,7 @@ const WaveText = (props) => {
     return (
         <div class="wave-text-stage">
             {
-              times(15, i => <div class="wave-text-layer" data-newline="&#xa;" data-firstline={props.greetings} data-secondline="Happy New Year!" data-thirdline="2020"></div>)            
+              times(15, i => <div class="wave-text-layer" data-newline="&#xa;" data-firstline={props.greetings} data-secondline="A Happy New Year!" data-thirdline="2020"></div>)            
             }
         </div>
     )

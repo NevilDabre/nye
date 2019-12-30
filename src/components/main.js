@@ -9,10 +9,13 @@ dotenv.config();
 
 
 const Main = (props) => {
+	const [name, setName] = useState("");
+	const [greetings, setGreetings] = useState("We Wish You,");
 	const searchBoxRef = React.useRef();
 	const whatsappBoxRef = React.useRef();
 	const formRef = React.useRef();
 	let history = useHistory();
+
 
 	useEffect(() => {
 		let clientName = window.location.href.split("clientname=")[1];
@@ -22,15 +25,11 @@ const Main = (props) => {
 		}
 	  }, []);
 
-	const [name, setName] = useState("");
-	const [greetings, setGreetings] = useState("We Wish You,");
-
 	const handleSubmit = ()=>{
 		if(validate()){
 		searchBoxRef.current.classList.add("hide");
 		whatsappBoxRef.current.classList.remove("hide");
 		setGreetings(`${name} Wishes You,`);
-		//history.push({ pathname: '/publish', state: { clientname: name }, });
 		history.push({
 			pathname: '/publish',
 			search: `?clientname=${name}`
@@ -54,12 +53,12 @@ const Main = (props) => {
 			<symbol id="icon-pause" viewBox="0 0 24 24">
 				<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
 			</symbol>
-			{/* <symbol id="icon-close" viewBox="0 0 24 24">
+			<symbol id="icon-close" viewBox="0 0 24 24">
 				<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
-			</symbol> */}
-			{/* <symbol id="icon-settings" viewBox="0 0 24 24">
+			</symbol>
+			<symbol id="icon-settings" viewBox="0 0 24 24">
 				<path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
-			</symbol> */}
+			</symbol>
 			<symbol id="icon-sound-on" viewBox="0 0 24 24">
 				<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
 			</symbol>
@@ -94,7 +93,7 @@ const Main = (props) => {
 				</div>
 				<div className="btn settings-btn">
 					<svg fill="white" width="24" height="24">
-						<use href="#icon-settings" xlinkHref="#icon-settings"></use>
+						<use href="https://www.linkedin.com/in/nevilledabre/" xlinkHref="https://www.linkedin.com/in/nevilledabre/"></use>
 					</svg>
 				</div>
 			</div>
@@ -189,8 +188,7 @@ const Main = (props) => {
 		
 
 		<div className="whatsappbar hide" ref={whatsappBoxRef}>
-			<a href={`whatsapp://send?text= There is a spacial Message from ${name} <br />
-			Click Here :- ${process.env.REACT_APP_DOMAIN}?client-name=${name}`} className="whatsapp-btn">
+			<a href={`whatsapp://send?text=There is a special 🎁 message from *${name}* just for your. See here:- ${process.env.REACT_APP_DOMAIN}/publish?clientname=${name}(No Spam, No Ads)`} className="whatsapp-btn">
 				<h2><i className="fab fa-whatsapp"></i> &nbsp; Share on Whatsapp!</h2>
       		</a>
 		</div>
