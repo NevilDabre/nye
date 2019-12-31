@@ -13,8 +13,7 @@ const Main = (props) => {
 	const whatsappBoxRef = React.useRef();
 	const formRef = React.useRef();
 	let history = useHistory();
-
-
+	
 	useEffect(() => {
 		let clientName = window.location.href.split("clientname=")[1];
 		if(clientName){
@@ -33,7 +32,6 @@ const Main = (props) => {
 			search: `?clientname=${name}`
 		  })
 		};
-
 	}
 
 	const validate = () => {
