@@ -488,7 +488,6 @@ $letter-spacing: 0.06em;
 	float: left;
 	width: 78%;
 	height: 40px;
-	padding: 0 1%;
 	border: none;
 }
 
@@ -497,9 +496,10 @@ $letter-spacing: 0.06em;
 	height: 40px;
 	background-color: #f77;
 	border: none;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	color: #fff;
 	cursor: pointer;
+	padding: 1% 1%;
 }
 
 .inputbox:focus {

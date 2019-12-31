@@ -27,7 +27,6 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Ringing in the New Year is cause for celebration, for spending time with friends and family, and for looking back. This website is created to spread a new year happiness around the world. contact me at - nevilhereonline@gmail.com" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="mobile-web-app-capable" content="yes">
@@ -44,7 +43,7 @@
     content="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon-v2.png">
   <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <script>
     setTimeout(function () {
       // This is a prime example of what starts out as a simple project
@@ -515,6 +514,7 @@
 
         if (canPlaySound !== canPlaySoundPrev) {
           if (canPlaySound) {
+
             soundManager.resumeAll();
           } else {
             soundManager.pauseAll();
@@ -1277,9 +1277,9 @@
           togglePause();
         }
         // O
-        else if (event.keyCode === 79) {
-          toggleMenu();
-        }
+        // else if (event.keyCode === 79) {
+        //   toggleMenu();
+        // }
         // Esc
         else if (event.keyCode === 27) {
           toggleMenu(false);
@@ -1289,7 +1289,7 @@
       mainStage.addEventListener('pointerstart', handlePointerStart);
       mainStage.addEventListener('pointerend', handlePointerEnd);
       mainStage.addEventListener('pointermove', handlePointerMove);
-      window.addEventListener('keydown', handleKeydown);
+      //window.addEventListener('keydown', handleKeydown);
 
 
       // Account for window resize and custom scale changes.
@@ -2423,7 +2423,7 @@
       var audio = new Audio('./wwc.mp3');
       audio.loop = true;
 
-      $(window).on("click mouseleave mouseenter touchstart mouseout", function () {
+      $(window).on("click mouseleave mouseenter touchstart mouseout mouseover", function () {
         var playPromise = audio.play();
 
         if (playPromise !== undefined) {
@@ -2433,6 +2433,15 @@
             .catch(error => {});
         }
       });
+
+      document.addEventListener("visibilitychange", function() {
+        if(document.visibilityState == 'hidden'){
+          var pausePromise = audio.pause();
+        }else if(document.visibilityState == 'visible'){
+          var promise = audio.pause();
+          var playPromise = audio.play();
+        }
+      }, false);
 
       $("#muteBgAudio").click(function () {
         var pausePromise = audio.pause();
