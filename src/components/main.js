@@ -17,7 +17,7 @@ const Main = (props) => {
 	useEffect(() => {
 		let clientName = window.location.href.split("clientname=")[1];
 		if(clientName){
-			clientName = clientName.replace('%20', ' ');
+			clientName = clientName.split('%20').join(' ');
 			setGreetings(`${clientName} Wishes You,`);
 		}
 	  }, []);
