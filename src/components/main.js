@@ -146,8 +146,6 @@ const Main = (props) => {
 					</form>
 					<div className="credits">
                Passionately built by 
-					
-						<a href="https://cmiller.tech/" target="_blank">Caleb Miller</a>.
             
 				
 					</div>
