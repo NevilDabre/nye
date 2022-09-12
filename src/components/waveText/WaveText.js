@@ -3,6 +3,16 @@ import './WaveText.scss';
 import { times } from 'lodash';
 
 const WaveText = (props) => {
+    const [year, setYear] = useState();
+    
+    useEffect(()=>{
+        const currentDate = new Date();
+        const currentYear = currentDate.getFullYear();
+        const month = currentDate.getMonth();
+        month>5?setYear(currentYear+1): setYear(currentYear);
+    }, []);
+
+    
     return (
         <div className="wave-text-stage">logo
             {
