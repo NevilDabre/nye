@@ -26,7 +26,7 @@ const Main = (props) => {
 		whatsappBoxRef.current.classList.remove("hide");
 		setGreetings(`${name} Wishes You,`);
 		history.push({
-			pathname: '/publish',
+			pathname: '/',
 			search: `?clientname=${name}`
 		  })
 		};
