@@ -180,7 +180,7 @@ const Main = (props) => {
 		
 
 		<div className="whatsappbar hide animated infinite bounce slow delay-5s" ref={whatsappBoxRef}>
-			<a href={`whatsapp://send?text=A special 🎁 message from *${name}*, See here(No Spam)➡️ ${process.env.REACT_APP_DOMAIN}/publish?clientname=${name}`} className="whatsapp-btn">
+			<a href={`whatsapp://send?text=A special 🎁 message from *${name}*, See here[No a spam]➡️ ${process.env.REACT_APP_DOMAIN}?clientname=${name}`} className="whatsapp-btn">
 				<h2><i className="fab fa-whatsapp"></i>Share on Whatsapp<i className="fab fa-whatsapp"></i></h2>
       		</a>
 		</div>
