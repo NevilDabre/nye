@@ -1,9 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import './main.scss';
-import dotenv from 'dotenv';
 import { useHistory } from "react-router-dom";
 import WaveText from './waveText/WaveText';
-dotenv.config();
 
 
 const Main = (props) => {
